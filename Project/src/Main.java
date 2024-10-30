@@ -8,6 +8,7 @@ public class Main
     public Main()  {
         Thread[] threads = new Thread[1000];
         final AtomicLong sum = new AtomicLong(0L);
+        long startTime = System.currentTimeMillis();
         System.out.println("Creating Array of Threads");
         for (int x=0;x<threads.length;x++)
         {
@@ -36,6 +37,7 @@ public class Main
         }
 
         System.out.println(sum);
+        System.out.println(System.currentTimeMillis() - startTime + " ms");
     }
 
     public static void main(String[] args)
