@@ -11,9 +11,14 @@ public class Main
             threads[x] = new Thread(new Runnable() {
                 @Override
                 public void run() {
-
+                    long sum = 0;
+                    for (int x=0;x<1000000;x++)
+                    {
+                        sum+=1;
+                    }
                 }
             });
+            threads[x].start();
         }
     }
 
